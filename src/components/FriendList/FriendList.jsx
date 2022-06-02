@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
+import FriendListItem from 'components/FriendList/FriendListItem/FriendListItem';
 import s from './FriendList.module.css';
-import FriendListItem from 'components/FriendListItem/FriendListItem';
 
 function FriendList({ friends }) {
   return (
@@ -18,8 +18,11 @@ function FriendList({ friends }) {
 }
 FriendList.propTypes = {
   friends: PropTypes.arrayOf(
-    PropTypes.shape({
+    PropTypes.exact({
       id: PropTypes.number.isRequired,
+      avatar: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      isOnline: PropTypes.bool.isRequired,
     })
   ),
 };

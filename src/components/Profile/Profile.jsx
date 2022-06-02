@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import defaultImage from '../default.jpg';
+import defaultImage from '../../assets/default.jpg';
 import s from './Profile.module.css';
 
 function Profile({ username, tag, location, avatar = defaultImage, stats }) {
@@ -8,7 +8,7 @@ function Profile({ username, tag, location, avatar = defaultImage, stats }) {
       <div className={s.description}>
         <img src={avatar} alt={username} className={s.avatar} />
         <p className={s.name}>{username}</p>
-        <p className={s.tag}>{tag}</p>
+        <p className={s.tag}>@{tag}</p>
         <p className={s.location}>{location}</p>
       </div>
 

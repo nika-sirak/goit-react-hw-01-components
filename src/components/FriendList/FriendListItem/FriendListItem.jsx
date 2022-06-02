@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import defaultImage from '../default.jpg';
+import defaultImage from '../../../assets/default.jpg';
 import s from './FriendListItem.module.css';
 
 function FriendListItem({ avatar = defaultImage, name, isOnline }) {
@@ -8,7 +8,7 @@ function FriendListItem({ avatar = defaultImage, name, isOnline }) {
       <span
         className={s.status}
         style={{ backgroundColor: isOnline ? '#008000' : '	#FF0000' }}
-      ></span>
+      />
       <img
         className={s.avatar}
         src={avatar ?? defaultImage}
